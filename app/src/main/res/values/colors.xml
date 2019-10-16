@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">#38A1F3</color>
+    <color name="colorAccent">#00bfff</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="cell">@color/white</color>
+    <color name="red">#FF0000</color>
+
+    <color name="black_transparent_00">#00000000</color>
+    <color name="black_transparent_20">#33000000</color>
+    <color name="black_transparent_40">#66000000</color>
+    <color name="black_transparent_60">#99000000</color>
+    <color name="black_transparent_80">#CC000000</color>
+
+    <color name="tweet_color">@color/black</color>
+    <color name="gray_color">#DDDDDD</color>
+    <color name="divider">#DEEEEE</color>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.TwitterAppActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/home_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twitter_app_margin_large"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="32sp"
+        android:textStyle="italic|bold"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar" />
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/twitter_app_margin_large"
+        android:scaleType="centerInside"
+        android:src="@drawable/twitter_icon"
+        android:transitionName="@string/nav_twitter_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_app_name" />
+
+    <TextView
+        android:id="@+id/home_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twitter_app_margin_medium"
+        android:gravity="center"
+        android:text="@string/home_title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_icon" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home_user_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twitter_app_margin_default"
+        android:layout_marginTop="@dimen/twitter_app_margin_large"
+        android:layout_marginEnd="@dimen/twitter_app_margin_default"
+        android:layout_marginBottom="@dimen/twitter_app_margin_default"
+        android:hint="@string/home_user_hint"
+        android:textColorHint="@color/gray_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_tittle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:transitionName="@string/nav_user_name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/home_btn_clear"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="@dimen/twitter_app_margin_default"
+        android:paddingTop="@dimen/twitter_app_margin_small"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/home_user_name_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_user_name_label" />
+
+    <TextView
+        android:id="@+id/home_message_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/home_user_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/home_user_name_label" />
+
+    <Button
+        android:id="@+id/home_btn_show"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/twitter_app_margin_large"
+        android:background="@drawable/btn_background"
+        android:text="@string/home_btn"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_message_error" />
+
+    <TextView
+        android:id="@+id/home_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twitter_app_margin_medium"
+        android:gravity="center"
+        android:text="@string/home_footer"
+        android:textColor="@color/gray_color"
+        android:textSize="12sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <include layout="@layout/twitter_progress_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/twitterHomeFragment">
+
+    <fragment
+        android:id="@+id/twitterHomeFragment"
+        android:name="com.uchoa.twitter.ui.fragments.home.TwitterHomeFragment"
+        android:label="TwitterHomeFragment">
+        <action
+            android:id="@+id/action_twitterHomeFragment_to_twitterListFragment"
+            app:destination="@id/twitterListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/twitterListFragment"
+        android:name="com.uchoa.twitter.ui.fragments.list.TwitterListFragment"
+        android:label="TwitterListFragment" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Twitter Feelings</string>
+
+    <string name="home_title">See how your friends are feeling based on their Tweets</string>
+    <string name="home_footer">Developed By: Cleiton Uchoa</string>
+    <string name="home_user_hint">User name</string>
+    <string name="home_btn">Show</string>
+    <string name="home_empty_user_error">Please insert the user name!</string>
+    <string name="home_user_not_found">Error - user name not found!</string>
+
+    <string name="popup_mood_title">%s was</string>
+    <string name="popup_mood_close">Close</string>
+
+</resources>
